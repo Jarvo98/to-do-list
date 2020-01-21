@@ -1,41 +1,43 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import MainPage from './components/MainPage';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
 
 function App() {
   var items = [
     {
-      name: 'Dashboard'
+      name: "Dashboard"
     },
     {
-      name: 'Shortcuts'
+      name: "Shortcuts"
     },
     {
-      name: 'Overview'
+      name: "Overview"
     },
     {
-      name: 'Events'
+      name: "Events"
     },
     {
-      name: 'Profile'
+      name: "Profile"
     },
     {
-      name: 'Status'
+      name: "Status"
     }
   ];
 
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={MainPage} />
+        <Route exact path="/" component={MainPage} />
         {items.map(item => {
           return (
-            <Route exact path={'/'+item.name} render={(props) => {
-              return (
-                <MainPage info={this.items} name={item}/>
-              );
-            }} />
+            <Route
+              exact
+              path={"/" + item.name}
+              render={props => {
+                return <MainPage info={this.items} name={item} />;
+              }}
+            />
           );
         })}
       </Switch>
