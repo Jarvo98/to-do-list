@@ -1,13 +1,22 @@
 import React from "react";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
+import ToDoTable from "./ToDoTable";
 
 class MainPage extends React.Component {
   renderInfo(info) {
     if (!!info) {
-      return info.name;
+      return info;
     } else {
-      return "";
+      return 0;
+    }
+  }
+
+  insertToDoTable(arrayOfObjects, id) {
+    if (id != null) {
+      return <ToDoTable info={arrayOfObjects} id={id} />;
+    } else {
+      return <ToDoTable info={arrayOfObjects} />
     }
   }
 
@@ -21,7 +30,7 @@ class MainPage extends React.Component {
               <Sidebar info={this.props.info} />
             </div>
             <div className="col-md-10 border-0 rounded">
-              {this.renderInfo(this.props.name)}
+              {this.insertToDoTable(this.props.info, this.props.id)}
             </div>
           </div>
         </div>
