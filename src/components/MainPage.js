@@ -16,7 +16,7 @@ class MainPage extends React.Component {
     if (id != null) {
       return <ToDoTable info={arrayOfObjects} id={id} />;
     } else {
-      return <ToDoTable info={arrayOfObjects} />
+      return <ToDoTable info={arrayOfObjects} />;
     }
   }
 

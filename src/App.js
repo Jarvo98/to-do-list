@@ -10,13 +10,13 @@ function App() {
       name: "Dashboard",
       toDo: [
         {
-          title: 'tarea'
+          title: "tarea"
         },
         {
-          title: 'cocinar'
+          title: "cocinar"
         },
         {
-          title: 'comer'
+          title: "comer"
         }
       ]
     },
@@ -25,13 +25,13 @@ function App() {
       name: "Shortcuts",
       toDo: [
         {
-          title: 'Estudiar'
+          title: "Estudiar"
         },
         {
-          title: 'Trabajar'
+          title: "Trabajar"
         },
         {
-          title: 'dormir'
+          title: "dormir"
         }
       ]
     },
@@ -40,13 +40,13 @@ function App() {
       name: "Overview",
       toDo: [
         {
-          title: 'Leer'
+          title: "Leer"
         },
         {
-          title: 'Conversar'
+          title: "Conversar"
         },
         {
-          title: 'Pensar'
+          title: "Pensar"
         }
       ]
     },
@@ -55,13 +55,13 @@ function App() {
       name: "Events",
       toDo: [
         {
-          title: 'Actuar'
+          title: "Actuar"
         },
         {
-          title: 'Hacer deporte'
+          title: "Hacer deporte"
         },
         {
-          title: 'Codificar'
+          title: "Codificar"
         }
       ]
     },
@@ -70,13 +70,13 @@ function App() {
       name: "Profile",
       toDo: [
         {
-          title: 'Fornicar'
+          title: "Fornicar"
         },
         {
-          title: 'Ver el celular'
+          title: "Ver el celular"
         },
         {
-          title: 'Buscar trabajo'
+          title: "Buscar trabajo"
         }
       ]
     },
@@ -85,13 +85,13 @@ function App() {
       name: "Status",
       toDo: [
         {
-          title: 'Ver JoJo'
+          title: "Ver JoJo"
         },
         {
-          title: 'Ver fire force'
+          title: "Ver fire force"
         },
         {
-          title: 'Ver doctor stone'
+          title: "Ver doctor stone"
         }
       ]
     }
@@ -100,16 +100,20 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" render={props => {
-          return <MainPage info={items} />
-        }}/>
+        <Route
+          exact
+          path="/"
+          render={props => {
+            return <MainPage info={items} />;
+          }}
+        />
         {items.map(item => {
           return (
             <Route
               exact
               path={"/" + item.name}
               render={props => {
-                return <MainPage info={items} id={item.key}/>;
+                return <MainPage info={items} id={item.key} />;
               }}
             />
           );
