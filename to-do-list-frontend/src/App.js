@@ -4,98 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import MainPage from "./components/MainPage";
 
 function App() {
-  var items = [
-    {
-      key: 0,
-      name: "Dashboard",
-      toDo: [
-        {
-          title: "tarea"
-        },
-        {
-          title: "cocinar"
-        },
-        {
-          title: "comer"
-        }
-      ]
-    },
-    {
-      key: 1,
-      name: "Shortcuts",
-      toDo: [
-        {
-          title: "Estudiar"
-        },
-        {
-          title: "Trabajar"
-        },
-        {
-          title: "dormir"
-        }
-      ]
-    },
-    {
-      key: 2,
-      name: "Overview",
-      toDo: [
-        {
-          title: "Leer"
-        },
-        {
-          title: "Conversar"
-        },
-        {
-          title: "Pensar"
-        }
-      ]
-    },
-    {
-      key: 3,
-      name: "Events",
-      toDo: [
-        {
-          title: "Actuar"
-        },
-        {
-          title: "Hacer deporte"
-        },
-        {
-          title: "Codificar"
-        }
-      ]
-    },
-    {
-      key: 4,
-      name: "Profile",
-      toDo: [
-        {
-          title: "Fornicar"
-        },
-        {
-          title: "Ver el celular"
-        },
-        {
-          title: "Buscar trabajo"
-        }
-      ]
-    },
-    {
-      key: 5,
-      name: "Status",
-      toDo: [
-        {
-          title: "Ver JoJo"
-        },
-        {
-          title: "Ver fire force"
-        },
-        {
-          title: "Ver doctor stone"
-        }
-      ]
-    }
-  ];
+  var items = JSON.parse('[{"key":0,"name":"Hoy","toDo":[{"title":"Jugar al Tera."},{"title":"Comer."},{"title":"Dormir."}]},{"key":1,"name":"Tareas","toDo":[{"title":"Trabajar"},{"title":"Bailar"},{"title":"Ir al ba\u00f1o"}]}]');
 
   return (
     <BrowserRouter>
@@ -103,11 +12,11 @@ function App() {
         <Route
           exact
           path="/"
-          render={props => {
+          render={function (props) {
             return <MainPage info={items} />;
           }}
         />
-        {items.map(item => {
+        {items.map(function (item) {
           return (
             <Route
               exact
