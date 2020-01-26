@@ -20,14 +20,14 @@ class MainPage extends React.Component {
     }
   }
 
-  render() {
+  render = () => {
     return (
       <div>
         <Navbar />
         <div className="container-fluid my-3">
           <div className="row">
             <div className="col-md-2 border-0 rounded">
-              <Sidebar info={this.props.info} />
+              <Sidebar info={this.props.info} handleNewFolder={this.props.handleNewFolder}/>
             </div>
             <div className="col-md-10 border-0 rounded">
               {this.insertToDoTable(this.props.info, this.props.id)}
