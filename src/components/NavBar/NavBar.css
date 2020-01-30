@@ -1,6 +1,8 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
-  background-color: #20232a;
+.toolbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  background-color: #521751;
+  top: 0;
+  left: 0;
 }

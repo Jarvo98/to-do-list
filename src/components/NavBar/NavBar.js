@@ -1,28 +1,44 @@
 import React from "react";
-import NavBarLink from "./NavBarLink/NavBarLink.js";
 import "./NavBar.css";
-import { faHome, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  let navBarLinks = [
+  /* let navBarLinks = [
     {
-      iconName: faHome,
+      iconName: faBars,
       name: "Home"
     },
     {
       iconName: faPowerOff,
       name: "Log out"
     }
-  ];
+  ]; */
 
   return (
-    <nav>
-      {navBarLinks.map(navBarLink => {
-        return (
-          <NavBarLink iconName={navBarLink.iconName} name={navBarLink.name} />
-        );
-      })}
-    </nav>
+    <header className="toolbar">
+      <nav className="toolbar__navigation">
+        <div></div>
+        <div>
+          <a href="/" className="toolbar__logo">
+            THE LOGO
+          </a>
+        </div>
+        <div className="toolbar__navigation__items">
+          <ul>
+            <li>
+              <a href="/">Users</a>
+            </li>
+            <li>
+              <a href="/">Products</a>
+            </li>
+          </ul>
+        </div>
+        {/* navBarLinks.map(navBarLink => {
+          return (
+            <NavBarLink iconName={navBarLink.iconName} name={navBarLink.name} />
+          );
+        }) */}
+      </nav>
+    </header>
   );
 };
 
