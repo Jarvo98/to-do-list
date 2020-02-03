@@ -1,8 +1,10 @@
-.toolbar {
-  height: 56px;
-  width: 100%;
-  position: fixed;
-  background-color: #521751;
-  top: 0;
-  left: 0;
+header {
+  background-color: #20232a;
+  display: flex;
+}
+
+img {
+  border-radius: 7rem;
+  margin: 0.4rem;
+  width: 3rem;
 }

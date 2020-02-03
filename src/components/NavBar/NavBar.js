@@ -1,42 +1,16 @@
 import React from "react";
 import "./NavBar.css";
+import src from "../../assets/ensolvers.jpeg";
 
 const NavBar = () => {
-  /* let navBarLinks = [
-    {
-      iconName: faBars,
-      name: "Home"
-    },
-    {
-      iconName: faPowerOff,
-      name: "Log out"
-    }
-  ]; */
-
   return (
-    <header className="toolbar">
-      <nav className="toolbar__navigation">
-        <div></div>
+    <header>
+      <nav>
         <div>
-          <a href="/" className="toolbar__logo">
-            THE LOGO
+          <a href="/">
+            <img src={src} alt="logo" />
           </a>
         </div>
-        <div className="toolbar__navigation__items">
-          <ul>
-            <li>
-              <a href="/">Users</a>
-            </li>
-            <li>
-              <a href="/">Products</a>
-            </li>
-          </ul>
-        </div>
-        {/* navBarLinks.map(navBarLink => {
-          return (
-            <NavBarLink iconName={navBarLink.iconName} name={navBarLink.name} />
-          );
-        }) */}
       </nav>
     </header>
   );
