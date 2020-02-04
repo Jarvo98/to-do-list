@@ -5,3 +5,7 @@
 .content {
   flex-grow: 1;
 }
+
+.side {
+  border-right: 1px gray solid;
+}
