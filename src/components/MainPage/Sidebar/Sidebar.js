@@ -6,11 +6,13 @@ class Sidebar extends React.Component {
 
   render() {
     return (
-      <ul>
-        {this.folders.map(item => {
-          return <li>{item}</li>;
-        })}
-      </ul>
+      <div className="shadowBox">
+        <ul>
+          {this.folders.map(item => {
+            return <li>{item}</li>;
+          })}
+        </ul>
+      </div>
     );
   }
 }

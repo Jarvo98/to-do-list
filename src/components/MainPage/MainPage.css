@@ -1,11 +1,17 @@
 .MainPage {
   display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .content {
   flex-grow: 1;
+  padding: 1rem;
+  background-color: gray;
 }
 
 .side {
   border-right: 1px gray solid;
+  padding: 1rem;
+  background-color: gray;
 }
