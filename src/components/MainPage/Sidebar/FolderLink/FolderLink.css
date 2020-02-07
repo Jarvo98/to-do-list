@@ -1,0 +1,19 @@
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.buttonContainer {
+  width: 15rem;
+  padding: 1rem;
+  border-bottom: #808080 solid 0.2rem;
+}
+
+.buttonContainer:hover {
+  background-color: #a8a8a8;
+}
+
+.buttonContainer:first-child {
+  border-radius: 1rem 1rem 0 0;
+}
