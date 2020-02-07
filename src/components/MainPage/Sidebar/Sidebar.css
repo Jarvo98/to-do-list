@@ -4,11 +4,6 @@ ul {
   margin: 0;
 }
 
-li {
-  padding: 0.6rem 8rem;
-  text-align: center;
-}
-
 .shadowBox {
   height: 100%;
   width: 100%;
