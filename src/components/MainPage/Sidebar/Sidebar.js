@@ -3,13 +3,19 @@ import "./Sidebar.css";
 import FolderLink from "./FolderLink/FolderLink";
 
 class Sidebar extends React.Component {
-  folders = ["", "", "", "", "", "", "", "", "", ""];
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      folders: this.props.folders
+    };
+  }
 
   render() {
     return (
       <div className="shadowBox">
-        {this.folders.map(item => {
-          return <FolderLink />;
+        {this.state.folders.map((item, index) => {
+          return <FolderLink folderInfo={item} index={index} />;
         })}
       </div>
     );

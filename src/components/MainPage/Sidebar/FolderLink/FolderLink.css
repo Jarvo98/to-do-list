@@ -1,17 +1,15 @@
-a,
-a:hover {
-  text-decoration: none;
-  color: black;
-}
-
 .buttonContainer {
   width: 15rem;
   padding: 1rem;
   border-bottom: #808080 solid 0.2rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
-.buttonContainer:hover {
-  background-color: #a8a8a8;
+.buttonContainer:hover,
+.selected {
+  background-color: hsl(0, 0%, 66%);
 }
 
 .buttonContainer:first-child {

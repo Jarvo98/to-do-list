@@ -1,11 +1,23 @@
 import React from "react";
 import "./FolderLink.css";
 
-const FolderLink = () => {
+const FolderLink = props => {
+  const selectedCondition = (selected, defaultClassName) => {
+    if (!!selected) {
+      defaultClassName += " selected";
+    }
+    return defaultClassName;
+  };
+
   return (
-    <a href="/" className="buttonContainer">
-      <span href="/">hola</span>
-    </a>
+    <div
+      className={selectedCondition(
+        props.folderInfo.selected,
+        "buttonContainer"
+      )}
+    >
+      <span>{props.folderInfo.folderName}</span>
+    </div>
   );
 };
 
