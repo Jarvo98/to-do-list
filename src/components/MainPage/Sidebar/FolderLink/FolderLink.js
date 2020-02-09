@@ -15,6 +15,7 @@ const FolderLink = props => {
         props.folderInfo.selected,
         "buttonContainer"
       )}
+      onClick={props.onClick(props.index)}
     >
       <span>{props.folderInfo.folderName}</span>
     </div>
