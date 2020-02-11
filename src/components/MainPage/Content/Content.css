@@ -1,5 +1,6 @@
 .shadowBox {
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: #bbb3b3b8;
+  box-shadow: 0 0 3px;
 }

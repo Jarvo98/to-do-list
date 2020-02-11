@@ -9,7 +9,7 @@
 
 .buttonContainer:hover,
 .selected {
-  background-color: hsl(0, 0%, 66%);
+  background-color: #eae5e2;
 }
 
 .buttonContainer:first-child {

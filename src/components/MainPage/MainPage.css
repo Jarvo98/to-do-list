@@ -7,11 +7,10 @@
 .content {
   flex-grow: 1;
   padding: 1rem;
-  background-color: gray;
+  background-color: white;
 }
 
 .side {
-  border-right: 1px gray solid;
   padding: 1rem;
-  background-color: gray;
+  background-color: white;
 }
