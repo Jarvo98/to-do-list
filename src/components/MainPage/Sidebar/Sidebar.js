@@ -15,7 +15,7 @@ class Sidebar extends React.Component {
     let updatedFolders = this.state.folders;
 
     for (let i = 0; i < updatedFolders.length; i++) {
-      if (i != index) {
+      if (i !== index) {
         updatedFolders[i].selected = false;
       } else {
         updatedFolders[i].selected = true;
