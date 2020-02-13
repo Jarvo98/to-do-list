@@ -59,18 +59,20 @@ class MainPage extends React.Component {
   }
 
   selectItemInSidebar = index => {
-    let numberOfFolders = this.state.folders.length;
+    this.setState(state => {
+      let counter = state.folders.length;
 
-    for (let i = 0; i < numberOfFolders; i++) {
-      if (i !== index) {
-        this.state.folders[i].selected = false;
-      } else {
-        this.state.folders[i].selected = true;
+      for (let i = 0; i < counter; i++) {
+        if (i !== index) {
+          state.folders[i].selected = false;
+        } else {
+          state.folders[i].selected = true;
+        }
       }
-    }
 
-    this.setState({
-      folders: this.state.folders
+      return {
+        folders: state.folders
+      };
     });
   };
 
