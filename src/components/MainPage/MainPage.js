@@ -82,7 +82,7 @@ class MainPage extends React.Component {
 
       for (let i = 0; i < amountOfFolders; i++) {
         if (folders[i].selected) {
-          return <Content folderInfo={folders[i].toDo} index={i} />;
+          return <Content folderInfo={folders[i]} index={i} />;
         }
       }
 

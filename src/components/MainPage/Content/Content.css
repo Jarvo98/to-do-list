@@ -4,3 +4,19 @@
   background-color: #bbb3b3b8;
   box-shadow: 0 0 3px;
 }
+
+.toDo,
+.title {
+  padding: 1rem;
+}
+
+.title,
+.toDo {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 1.5rem;
+}

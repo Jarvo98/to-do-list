@@ -5,11 +5,24 @@ const Content = props => {
   const renderContentBasedOnProps = folderInfo => {
     if (!!folderInfo) {
       return (
-        <ul>
-          {folderInfo.map(toDo => {
-            return <li>{toDo.name}</li>;
+        <div>
+          <div className="title">
+            <div className="header">{folderInfo.folderName}:</div>
+            <div>
+              <button>Añadir</button>
+            </div>
+          </div>
+          {folderInfo.toDo.map(toDo => {
+            return (
+              <div className="toDo">
+                <div>{toDo.name}</div>
+                <div>
+                  <button>Eliminar</button>
+                </div>
+              </div>
+            );
           })}
-        </ul>
+        </div>
       );
     }
   };
