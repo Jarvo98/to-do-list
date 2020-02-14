@@ -1,5 +1,7 @@
 import React from "react";
 import "./Content.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Content = props => {
   const renderContentBasedOnProps = folderInfo => {
@@ -7,9 +9,11 @@ const Content = props => {
       return (
         <div>
           <div className="title">
-            <div className="header">{folderInfo.folderName}:</div>
+            <div className="header"></div>
             <div>
-              <button>Añadir</button>
+              <button className="button" onClick={props.onClick(props.index)}>
+                <FontAwesomeIcon icon={faPlus} />
+              </button>
             </div>
           </div>
           {folderInfo.toDo.map(toDo => {
@@ -17,7 +21,9 @@ const Content = props => {
               <div className="toDo">
                 <div>{toDo.name}</div>
                 <div>
-                  <button>Eliminar</button>
+                  <button className="button">
+                    <FontAwesomeIcon icon={faTrash} />
+                  </button>
                 </div>
               </div>
             );

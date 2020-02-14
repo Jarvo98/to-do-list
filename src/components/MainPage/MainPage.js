@@ -58,6 +58,18 @@ class MainPage extends React.Component {
     };
   }
 
+  addNewToDo = index => {
+    let nameOfNewToDo = prompt("Enter the name of the new To Do.");
+
+    this.setState(state => {
+      state.folders[index].toDo.ṕush({
+        name: nameOfNewToDo
+      });
+
+      return state;
+    });
+  };
+
   selectItemInSidebar = index => {
     this.setState(state => {
       let counter = state.folders.length;
@@ -82,7 +94,13 @@ class MainPage extends React.Component {
 
       for (let i = 0; i < amountOfFolders; i++) {
         if (folders[i].selected) {
-          return <Content folderInfo={folders[i]} index={i} />;
+          return (
+            <Content
+              folderInfo={folders[i]}
+              index={i}
+              onClick={this.addNewToDo}
+            />
+          );
         }
       }
 
