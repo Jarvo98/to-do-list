@@ -11,7 +11,3 @@
 .selected {
   background-color: #eae5e2;
 }
-
-.buttonContainer:first-child {
-  border-radius: 1rem 1rem 0 0;
-}

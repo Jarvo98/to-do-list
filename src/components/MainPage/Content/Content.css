@@ -1,17 +1,13 @@
 .shadowBox {
   height: 100%;
   width: 100%;
-  background-color: #bbb3b3b8;
+  background-color: #f9f9f9;
   box-shadow: 0 0 3px;
-}
-
-.toDo,
-.title {
-  padding: 1rem;
 }
 
 .title,
 .toDo {
+  padding: 1rem;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -26,4 +22,9 @@
   background: none;
   padding: 0%;
   cursor: pointer;
+}
+
+h1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

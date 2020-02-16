@@ -6,11 +6,4 @@
 
 .content {
   flex-grow: 1;
-  padding: 1rem;
-  background-color: white;
-}
-
-.side {
-  padding: 1rem;
-  background-color: white;
 }

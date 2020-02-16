@@ -9,12 +9,9 @@ const Content = props => {
       return (
         <div>
           <div className="title">
-            <div className="header"></div>
-            <div>
-              <button className="button" onClick={props.onClick(props.index)}>
-                <FontAwesomeIcon icon={faPlus} />
-              </button>
-            </div>
+            <button className="button">
+              <FontAwesomeIcon icon={faPlus} />
+            </button>
           </div>
           {folderInfo.toDo.map(toDo => {
             return (
@@ -28,6 +25,12 @@ const Content = props => {
               </div>
             );
           })}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Welcome</h1>
         </div>
       );
     }
